@@ -1,0 +1,233 @@
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mnj4k[0m
+{"level":"info","ts":1590589130.069915,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590589130.0708008,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-wjwgd[0m
+{"level":"info","ts":1590589131.181955,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590589131.1847897,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-speakers-master-md6w4-9ws7j[0m
+{"level":"info","ts":1590589140.1886168,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590589141.403788,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/fmtok8s-speakers.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< com.*******.conferences:fmtok8s-speakers >--------------
+[INFO] Building From Monolith to K8S :: Speakers Service 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ fmtok8s-speakers ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ fmtok8s-speakers ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ fmtok8s-speakers ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ fmtok8s-speakers ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ fmtok8s-speakers ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ fmtok8s-speakers ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /workspace/source/target/surefire-reports/2020-05-27T14-19-40_882-jvmRun1.dumpstream
+14:19:46.156 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.157 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+14:19:46.157 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+14:19:46.166 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.*******.conferences.speakers.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+14:19:46.167 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.*******.conferences.speakers.DemoApplicationTests], using SpringBootContextLoader
+14:19:46.168 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.speakers.DemoApplicationTests]: class path resource [com/*******/conferences/speakers/DemoApplicationTests-context.xml] does not exist
+14:19:46.169 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.speakers.DemoApplicationTests]: class path resource [com/*******/conferences/speakers/DemoApplicationTestsContext.groovy] does not exist
+14:19:46.169 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.*******.conferences.speakers.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:19:46.169 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.*******.conferences.speakers.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:19:46.175 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.176 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.*******.conferences.speakers.DemoApplication for test class com.*******.conferences.speakers.DemoApplicationTests
+14:19:46.182 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.*******.conferences.speakers.DemoApplicationTests]: using defaults.
+14:19:46.182 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+14:19:46.190 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+14:19:46.204 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+14:19:46.217 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+14:19:46.225 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@301ec38b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@17a1e4ca, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@10ded6a9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c5dc4a2, org.springframework.test.context.event.EventPublishingTestExecutionListener@4a194c39, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52066604, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@340b9973, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@56113384, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5669c5fb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@373ebf74]
+14:19:46.226 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.226 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.475 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.475 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.speakers.DemoApplicationTests]
+[INFO] Running com.*******.conferences.speakers.DemoApplicationTests
+14:19:46.480 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.481 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.482 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.482 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.568 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@45905bff testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@2a2c13a8 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.*******.conferences.speakers.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@70ed52de, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7188af83, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@533bda92, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@536f2a7e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@15a34df2], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+14:19:46.583 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.590 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.speakers.DemoApplicationTests]
+14:19:46.636 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@45905bff testClass = DemoApplicationTests, testInstance = com.*******.conferences.speakers.DemoApplicationTests@1021f6c9, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@2a2c13a8 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.*******.conferences.speakers.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@70ed52de, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7188af83, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@533bda92, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@536f2a7e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@15a34df2], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+14:19:46.738 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-05-27 14:19:47.546  INFO 72 --- [           main] c.s.c.speakers.DemoApplicationTests      : Starting DemoApplicationTests on *******-fmtok8s-speakers-master-md6w4-1-from-build-pack-c6tqx-p with PID 72 (started by root in /workspace/source)
+2020-05-27 14:19:47.548  INFO 72 --- [           main] c.s.c.speakers.DemoApplicationTests      : No active profile set, falling back to default profiles: default
+2020-05-27 14:19:51.760  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.processor.PostProcessorConfiguration' of type [io.zeebe.spring.client.config.processor.PostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:51.772  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration' of type [io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:51.778  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeExpressionResolver' of type [io.zeebe.spring.util.ZeebeExpressionResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:51.843  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeDeploymentValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeDeploymentValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:51.863  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deploymentPostProcessor' of type [io.zeebe.spring.client.config.processor.DeploymentPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:51.876  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeWorkerValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeWorkerValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:51.885  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeWorkerPostProcessor' of type [io.zeebe.spring.client.config.processor.ZeebeWorkerPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:52.079  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebe.client-io.zeebe.spring.client.properties.ZeebeClientConfigurationProperties' of type [io.zeebe.spring.client.properties.ZeebeClientConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:52.146  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration' of type [io.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration$$EnhancerBySpringCGLIB$$3bf18741] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:52.239  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'builder' of type [io.zeebe.client.impl.ZeebeClientBuilderImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:52.244  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.ZeebeClientSpringConfiguration' of type [io.zeebe.spring.client.config.ZeebeClientSpringConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:52.259  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeClientObjectFactory' of type [io.zeebe.spring.client.config.ZeebeClientSpringConfiguration$$Lambda$452/0x0000000100397840] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:19:52.339  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeClientLifecycle' of type [io.zeebe.spring.client.ZeebeClientLifecycle] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-27 14:20:00.610  INFO 72 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-27 14:20:04.974  INFO 72 --- [           main] c.s.c.speakers.DemoApplicationTests      : Started DemoApplicationTests in 18.222 seconds (JVM running for 22.694)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.011 s - in com.*******.conferences.speakers.DemoApplicationTests
+[WARNING] ForkStarter IOException: org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+ using SpringBootContextLoader
+ Context.groovy}.
+ non-private, non-final, nested classes annotated with @Configuration.
+ org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@22bac7bc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@63798ca7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4612b856, org.springframework.test.context.event.EventPublishingTestExecutionListener@22875539, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5674e1f2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@79c7532f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2a448449, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@32f232a5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@43f82e78]. See the dump file /workspace/source/target/surefire-reports/2020-05-27T14-19-40_882-jvmRun1.dumpstream
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ fmtok8s-speakers ---
+[INFO] Building jar: /workspace/source/target/fmtok8s-speakers-0.0.1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.6.RELEASE:repackage (repackage) @ fmtok8s-speakers ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ fmtok8s-speakers ---
+[INFO] Installing /workspace/source/target/fmtok8s-speakers-0.0.1.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-speakers/0.0.1/fmtok8s-speakers-0.0.1.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-speakers/0.0.1/fmtok8s-speakers-0.0.1.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ fmtok8s-speakers ---
+[INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:05 min
+[INFO] Finished at: 2020-05-27T14:20:13Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0527 14:20:15.551375      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest openjdk:11-jre-slim 
+E0527 14:20:16.025131      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0527 14:20:16.028990      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0004] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0005] Executing 0 build triggers                   
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0005] Checking for cached layer gcr.io/camunda-researchanddevelopment/cache:5e52b5b0093f30d67e66f0688e714b34fbb09c785ccaff548d5728587c3a3c9c... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
+[36mINFO[0m[0005] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
+[36mINFO[0m[0012] ENV PORT 8080                                
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] EXPOSE 8080                                  
+[36mINFO[0m[0012] cmd: EXPOSE                                  
+[36mINFO[0m[0012] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0012] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0012] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0012] Resolving 1 paths                            
+[36mINFO[0m[0012] Taking snapshot of files...                  
+[36mINFO[0m[0012] Pushing layer gcr.io/camunda-researchanddevelopment/cache:5e52b5b0093f30d67e66f0688e714b34fbb09c785ccaff548d5728587c3a3c9c to cache now 
+[36mINFO[0m[0012] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0012] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0012] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0012] Resolving 1 paths                            
+[36mINFO[0m[0012] Taking snapshot of files...                  
+[36mINFO[0m[0014] WORKDIR /opt                                 
+[36mINFO[0m[0014] cmd: workdir                                 
+[36mINFO[0m[0014] Changed working directory to /opt            
+[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0014] CMD ["java", "-jar", "app.jar"]              
+[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0014] Pushing layer gcr.io/camunda-researchanddevelopment/cache:8499c5d408752122df606d4b7582b8107bc62c8cc57fc45d1f9dea745331210d to cache now 
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/fmtok8s-speakers to an unshallow repository
+Generating change log from git ref 6a5f5f12e4b38e748a682c7b176141b3fa167e95 => 1696cbb3a39a51a573c1c8b660075901d04226b8
+WARNING: Failed to enrich commit 5d564e71c0964344b6506989dac2e48accaec21e with issues: selected more than one user from users.jenkins.io: [******* x-0]
+WARNING: Failed to enrich commit 5d564e71c0964344b6506989dac2e48accaec21e with issues: selected more than one user from users.jenkins.io: [******* x-0]
+Finding issues in commit messages using git format
+WARNING: Failed to enrich commit c1522a5a772ff77f7c161a2e67e05f5a2331a463 with issues: selected more than one user from users.jenkins.io: [******* x-0]
+WARNING: Failed to enrich commit c1522a5a772ff77f7c161a2e67e05f5a2331a463 with issues: selected more than one user from users.jenkins.io: [******* x-0]
+WARNING: No release found for *******/fmtok8s-speakers and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/*******/fmtok8s-speakers/releases/tag/v0.0.1
+generated: /workspace/source/charts/fmtok8s-speakers/templates/release.yaml
+Created Release fmtok8s-speakers-0-0-1 resource in namespace **
+Updating PipelineActivity *******-fmtok8s-speakers-master-1 with version 0.0.1
+Updated PipelineActivities *******-fmtok8s-speakers-master-1 with release notes URL: https://github.com/*******/fmtok8s-speakers/releases/tag/v0.0.1
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file fmtok8s-speakers-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32msalaboy-fmtok8s-speakers-master-md6w4-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app fmtok8s-speakers version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/*******/environment-jnation-tests-staging/pull/28
+Added label updatebot to Pull Request https://github.com/*******/environment-jnation-tests-staging/pull/28
+got git provider status pending from PR https://github.com/*******/environment-jnation-tests-staging/pull/28
+got git provider status pending from PR https://github.com/*******/environment-jnation-tests-staging/pull/28
+got git provider status pending from PR https://github.com/*******/environment-jnation-tests-staging/pull/28
+Pull Request https://github.com/*******/environment-jnation-tests-staging/pull/28 is merged at sha 3850dd9cbe73bdd010dd00e42f27ec0e1855dfd9
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names fmtok8s-speakers, **-fmtok8s-speakers, **-staging-fmtok8s-speakers
