@@ -43,7 +43,7 @@ public class DemoApplication {
         log.info("> Confirmation for Proposal Received: " + proposalId);
         client.newPublishMessageCommand()
                 .messageName("SpeakerConfirmation").correlationKey(proposalId)
-                .send();
+                .send().join();
         return "Proposal " + proposalId + " Confirmed by Speaker";
     }
 
