@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.salaboy.conferences</groupId>
     <artifactId>fmtok8s-speakers</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>From Monolith to K8S :: Speakers Service</name>
     <description>From Monolith to K8S :: Speakers Service</description>
 
