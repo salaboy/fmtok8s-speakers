@@ -1,11 +1,7 @@
 package com.salaboy.conferences.speakers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.zeebe.client.api.response.ActivatedJob;
-import io.zeebe.client.api.worker.JobClient;
 import io.zeebe.spring.client.EnableZeebeClient;
 import io.zeebe.spring.client.ZeebeClientLifecycle;
-import io.zeebe.spring.client.annotation.ZeebeWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,17 +9,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
-import java.util.stream.Collectors;
-
 @SpringBootApplication
 @RestController
 @EnableZeebeClient
 @Slf4j
-public class DemoApplication {
+public class SpeakersServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(SpeakersServiceApplication.class, args);
     }
 
     @Value("${version:0.0.0}")
