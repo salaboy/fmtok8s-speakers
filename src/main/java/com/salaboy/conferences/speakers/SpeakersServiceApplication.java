@@ -37,7 +37,7 @@ public class SpeakersServiceApplication {
         client.newPublishMessageCommand()
                 .messageName("SpeakerConfirmation").correlationKey(proposalId)
                 .send().join();
-        return "Proposal " + proposalId + " Confirmed by Speaker";
+        return "*******\n\n # Proposal " + proposalId + " Confirmed by Speaker\n\n *******\n\n";
     }
 
 
